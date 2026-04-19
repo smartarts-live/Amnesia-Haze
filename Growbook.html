@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Amnesia Haze Grow-Guide | Constantin</title>
+    <style>
+        :root {
+            --primary: #1b5e20;
+            --accent: #4caf50;
+            --bg: #f1f8e9;
+            --text: #333;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.08);
+            --nav-height: 70px;
+        }
+
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding-bottom: calc(var(--nav-height) + 40px);
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--primary);
+            padding: 15px;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        h1 { color: var(--white); font-size: 1.1rem; margin: 0 0 10px 0; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #searchBar {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            padding: 20px 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+            background: var(--white);
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            scroll-margin-top: 100px;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 { color: var(--accent); border-left: 5px solid var(--accent); padding-left: 15px; margin-top: 0; font-size: 1.4rem; }
+        h3 { color: var(--primary); font-size: 1.15rem; margin-top: 20px; }
+
+        .card {
+            background: #fdfdfd;
+            border: 1px solid #eaeaea;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 12px 0;
+        }
+
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 5px solid var(--accent);
+            padding: 15px;
+            border-radius: 4px 12px 12px 4px;
+            font-weight: 500;
+            margin: 15px 0;
+        }
+
+        .data-tag {
+            display: inline-block;
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-right: 5px;
+        }
+
+        nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background: var(--white);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.05);
+            z-index: 1001;
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: #95a5a6;
+            font-size: 10px;
+            text-align: center;
+            flex: 1;
+            transition: color 0.3s;
+        }
+
+        .nav-item i { display: block; font-size: 22px; margin-bottom: 4px; font-style: normal; }
+        .nav-item.active { color: var(--accent); font-weight: 700; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+
+        .hidden { display: none !important; }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        
+        a { color: var(--accent); text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Amnesia Haze Grow-Guide</h1>
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Suchen nach pH, LST, Dünger..." onkeyup="searchContent()">
+    </div>
+</header>
+
+<div class="container">
+    <section id="analyse" class="reveal">
+        <h2>1. Ist-Zustand & Analyse</h2>
+        <div class="highlight-box">Status: Vital & Gesund</div>
+        <p>Die Pflanze zeigt ein sattes Blattgrün und keine Mängel. Das angewandte Low Stress Training (LST) ist fachgerecht ausgeführt.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <strong>Stärken</strong>
+                <ul>
+                    <li>Keine Schädlinge sichtbar.</li>
+                    <li>Apikale Dominanz erfolgreich gebrochen.</li>
+                    <li>Gute Triebentwicklung der Seitenzweige.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <strong>Setup-Fokus</strong>
+                <ul>
+                    <li>Lechuza Bewässerungssystem.</li>
+                    <li>Outdoor-Standort (warm & stabil).</li>
+                    <li>Sativa-Genetik (Amnesia Haze).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="training" class="reveal">
+        <h2>2. LST & Pflanzentraining</h2>
+        <p>Das Ziel ist ein flacher, breiter Wuchs, um die Lichtausbeute outdoor zu maximieren und Windlast zu minimieren.</p>
+        <ul>
+            <li><strong>Nachbinden:</strong> Neue Triebe ab 5-10cm Länge waagerecht zum Topfrand führen.</li>
+            <li><strong>Höhenkontrolle:</strong> Alle Triebe auf einer Ebene halten (Auxin-Management).</li>
+            <li><strong>Lollipopping:</strong> Untere Kleinsttriebe entfernen, die kein Licht erhalten.</li>
+            <li><strong>Entlauben:</strong> Große Sonnensegel, die Innentriebe verdecken, strategisch entfernen.</li>
+        </ul>
+    </section>
+
+    <section id="versorgung" class="reveal">
+        <h2>3. Nährstoffe & Messwerte</h2>
+        <p>Präzision bei den Wasserwerten verhindert Nährstoff-Lockouts und Blattverbrennungen.</p>
+        
+        <div class="card">
+            <strong>Optimale Zielwerte:</strong>
+            <ul>
+                <li><span class="data-tag">pH-Wert</span> <strong>6.0 - 6.5</strong> (Nach Düngerzugabe messen!)</li>
+                <li><span class="data-tag">EC Vegi</span> <strong>0.8 - 1.2 mS/cm</strong></li>
+                <li><span class="data-tag">EC Blüte</span> <strong>1.2 - 1.5 mS/cm</strong></li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            Achtung: Amnesia Haze reagiert empfindlich auf zu viel Stickstoff in der späten Phase. EC-Werte langsam steigern.
+        </div>
+    </section>
+
+    <section id="equipment" class="reveal">
+        <h2>4. Benötigtes Equipment</h2>
+        <p>Hier sind die empfohlenen Artikel für das optimale Management deines Grows:</p>
+        <ul>
+            <li><strong>Dünger:</strong> <a href="https://amzn.eu/d/1Zp5JvY" target="_blank">Canna Terra Starter Set</a></li>
+            <li><strong>Messung:</strong> <a href="https://amzn.eu/d/c9XQ3k4" target="_blank">Apera Instruments pH & EC Set</a></li>
+            <li><strong>Korrektur:</strong> <a href="https://amzn.eu/d/a8PjL9v" target="_blank">BioBizz pH Down / Up</a></li>
+            <li><strong>Training:</strong> <a href="https://amzn.eu/d/5o4mN1t" target="_blank">Gummierter Pflanzendraht</a></li>
+        </ul>
+    </section>
+
+    <section id="erfolg" class="reveal">
+        <h2>5. Blüte & Ernte-Erfolg</h2>
+        <p>Die finale Phase bestimmt die Qualität der Terpene und die Potenz.</p>
+        <div class="card">
+            <ul>
+                <li><strong>Stretch:</strong> In den ersten 3 Blütewochen wächst die Pflanze extrem – Platz einplanen.</li>
+                <li><strong>Belüftung:</strong> Bei dichten Blüten auf Luftzirkulation achten (Schimmelprävention).</li>
+                <li><strong>Spülen:</strong> Letzte 10-14 Tage nur noch reines pH-reguliertes Wasser ohne Dünger.</li>
+            </ul>
+        </div>
+        <p><em>"Geduld ist die wichtigste Zutat bei der Amnesia Haze (10-12 Wochen Blüte)."</em></p>
+    </section>
+</div>
+
+<nav>
+    <a href="#analyse" class="nav-item"><i>🌿</i>Status</a>
+    <a href="#training" class="nav-item"><i>⚓</i>LST</a>
+    <a href="#versorgung" class="nav-item"><i>💧</i>Werte</a>
+    <a href="#equipment" class="nav-item"><i>📦</i>Shop</a>
+    <a href="#erfolg" class="nav-item"><i>🏆</i>Ernte</a>
+</nav>
+
+<script>
+    const observerOptions = { threshold: 0.15 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) { entry.target.classList.add('active'); }
+        });
+    }, observerOptions);
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    function searchContent() {
+        let input = document.getElementById('searchBar').value.toLowerCase();
+        let sections = document.querySelectorAll('.reveal');
+        sections.forEach(section => {
+            let text = section.innerText.toLowerCase();
+            if (text.includes(input)) {
+                section.classList.remove('hidden');
+                section.classList.add('active');
+            } else {
+                section.classList.add('hidden');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', () => {
+        let current = "";
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-item');
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 150) { current = section.getAttribute('id'); }
+        });
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href').includes(current)) { item.classList.add('active'); }
+        });
+    });
+</script>
+
+</body>
+</html>
